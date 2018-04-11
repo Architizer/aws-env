@@ -71,7 +71,7 @@ class Command(object):
 
     def _format_elasticbeanstalk(self, buff, env_vars):
         j2 = (
-            'option_settings\n'
+            'option_settings:\n'
             '{% for env in env_vars %}'
             ' - option_name: {{ env.name }}\n'
             '   value: "{{ env.value }}"\n'
